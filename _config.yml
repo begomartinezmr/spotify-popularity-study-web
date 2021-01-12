@@ -22,8 +22,9 @@ social:
 # THEME SETTINGS
 navigation: # Navigation links
   - {name: 'Home', link: '/'}
-  - {name: 'About', link: '/about'}
   - {name: 'Project Description', link: '/projectdescription'}
+  - {name: 'How It Works', link: '/howitworks'}
+  - {name: 'About', link: '/about'}
 
 tagline: >
   Modern Jekyll theme focused on speed performance &amp; SEO best practices
