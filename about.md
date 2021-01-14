@@ -21,5 +21,4 @@ Somos estudiantes de Ingenieria informática de la Universidad Complutense de Ma
 		<h3>David Cantador Piedras<h3>
 		<h6>Estudiante de tercer año de la carrera de Ingeniería Informática</h6>
         <p>Encargado de la Web</p>
-    </div>
-</div>
+   
