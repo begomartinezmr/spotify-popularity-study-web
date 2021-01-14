@@ -27,7 +27,7 @@ navigation: # Navigation links
   - {name: 'About', link: '/about'}
 
 tagline: >
-Popularity prediction model of new Spotify releases.
+  Popularity prediction model of new Spotify releases.
 
 hero_img: posts/background.jpg # Main background image: use the path from /assets/img/ => This will output /assets/img/posts/sleek_lg.jpg
 
