@@ -7,3 +7,6 @@ permalink: /about/
 <h1>Sobre nosotros:</h1>
 Somos estudiantes de Ingenieria informática de la Universidad Complutense de Madrid y estamos haciendo un proyecto para la asignatura de Cloud y Big Data
 </div>
+<div class="persona">
+    <div>
+</div>
