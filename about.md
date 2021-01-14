@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+featured-img: Rehis
 ---
 <div class="main_tittle">
 <h1>Sobre nosotros:</h1>
@@ -12,7 +13,7 @@ Somos estudiantes de Ingenieria informática de la Universidad Complutense de Ma
     <h3>David Cantador Piedras</h3>
     </div>
     <div class="photo_P">
-        <img src="./_img/Rehis.jpg"></img>
+        <img src="./_img/Rehis.jpg">
     </div>
 
 </div>
