@@ -8,7 +8,7 @@ permalink: /about/
 <h1>Sobre nosotros:</h1>
 Somos estudiantes de Ingenieria informática de la Universidad Complutense de Madrid y estamos haciendo un proyecto para la asignatura de Cloud y Big Data
 </div>
-<div class="row made_life_text">
+
                         <div class="col-lg-6">
 							<div class="chart_img">
 								<img class="img-fluid" src="https://begomartinezmr.github.io/spotify-popularity-study-web/_img/Rehis.jpg" alt="" style="height: 300px;">
@@ -21,7 +21,3 @@ Somos estudiantes de Ingenieria informática de la Universidad Complutense de Ma
                                 <p>Encargado de la Web</p>
 						    </div>
 						</div>
-</div>
-
-
-</div>
