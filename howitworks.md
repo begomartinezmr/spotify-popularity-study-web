@@ -6,7 +6,25 @@ permalink: /howitworks/
 
 ¿Cómo funciona el proyecto?
 
-However, you can use free SaaS as a backend for forms, such as [Formspree](https://formspree.io/) to handle form submissions. Sleek has a configured form using formspree ready for you. All you have to do is change the email in `.config.yml`.
+#!/usr/bin/python
 
-Check the form below to see it in action!
+# Import modules for CGI handling 
+import cgi, cgitb 
+
+# Create instance of FieldStorage 
+form = cgi.FieldStorage() 
+
+# Get data from fields
+first_name = form.getvalue('first_name')
+last_name  = form.getvalue('last_name')
+
+print "Content-type:text/html\r\n\r\n"
+print "<html>"
+print "<head>"
+print "<title>Hello - Second CGI Program</title>"
+print "</head>"
+print "<body>"
+print "<h2>Hello %s %s</h2>" % (first_name, last_name)
+print "</body>"
+print "</html>"
 
