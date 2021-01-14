@@ -5,5 +5,11 @@ permalink: /howitworks/
 ---
 
 ¿Cómo funciona el proyecto?
-{% include image.html %}
+{% 
+<img
+src="{{'/assets/img/posts/background.jpg' | relative_url }}"
+class="lazyload blur"
+alt="backgroud"
+/> 
+%}
 
