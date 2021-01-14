@@ -12,7 +12,7 @@ Somos estudiantes de Ingenieria informática de la Universidad Complutense de Ma
 <p>Hola mundo</p>
 <div class="col-lg-6">
 	<div class="chart_img">
-		  <img  src="{{'_img/Rehis.jpg' | relative_url }}"}
+		  <img  src="{{'_img/Rehis.jpg' | relative_url }}">
 	</div>
 </div>
 <div class="col-lg-6">
