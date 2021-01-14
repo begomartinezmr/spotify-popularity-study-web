@@ -13,7 +13,7 @@ Somos estudiantes de Ingenieria informática de la Universidad Complutense de Ma
 <div class="col-lg-6">
 	<div class="chart_img">
     <img src="{{'/assets/img/posts/background.jpg' | relative_url }}" class="lazyload blur" alt="backgroud" /> 
-		  <img  src="{{'/_img/Rehis.jpg' | relative_url }}" class="w3-circle"/>
+		  <img  src="{{'assets/img/posts/Rehis.jpg' | relative_url }}" class="w3-circle"/>
 	</div>
 </div>
 <div class="col-lg-6">
