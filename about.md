@@ -12,7 +12,7 @@ Somos estudiantes de Ingenieria informática de la Universidad Complutense de Ma
 <p>Hola mundo</p>
 <div class="col-lg-6">
 	<div class="chart_img">
-		<img class="img-fluid" src="https://begomartinezmr.github.io/spotify-popularity-study-web/_img/Rehis.jpg" alt="" style="height: 300px;">
+		  <img  src="{{'_img\Rehis.jpg' | relative_url }}"}
 	</div>
 </div>
 <div class="col-lg-6">
