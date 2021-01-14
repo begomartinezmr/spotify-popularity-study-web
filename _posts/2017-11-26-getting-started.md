@@ -27,7 +27,7 @@ Create a new Markdown file such as `2017-01-13-my-post.md` in `_post` folder. Co
 
 ---
 layout: post # needs to be post
-title: Getting Started with Sleek # title of your post
+title: Spotipy # title of your post
 featured-img: sleek #optional - if you want you can include hero image
 ---
 
