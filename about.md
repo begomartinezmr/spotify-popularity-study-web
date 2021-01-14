@@ -13,6 +13,7 @@ Somos estudiantes de Ingenieria informática de la Universidad Complutense de Ma
     <h3>David Cantador Piedras</h3>
     </div>
     ({{ site.url }}{{ site.baseurl }})
+    ({{ site.url }}{{ site.baseurl }}){{post.url}}
     <div class="photo_P">
         <img src="../_img/Rehis.jpg">
     </div>
