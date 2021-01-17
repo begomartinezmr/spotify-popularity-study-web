@@ -15,7 +15,7 @@ header {
 }
 
 .violet-overlay {
-    background-color: rgba(189, 140, 191, .51);
+    background-color: rgba(0, 143, 57, .51);
     width: 100%;
     height: 100%;
     padding: 70px 0;
@@ -28,7 +28,7 @@ header {
 }
 
 h2 span, h1 span {
-    color: #bd8cbf;
+    color: #008f39;
 }
 
 li {
@@ -130,8 +130,8 @@ header button a {
 }
 
 header button:hover {
-    background-color: #bd8cbf;
-    border: 1px solid #bd8cbf;
+    background-color: #008f39;
+    border: 1px solid #008f39;
 }
 
 header button:hover a {
@@ -169,7 +169,7 @@ header button:hover a {
 }
 
 .about-us .small-container > p + div button {
-    background-color: #bd8cbf;
+    background-color: #008f39;
     border: none;
 }
 
@@ -183,7 +183,7 @@ header button:hover a {
     width: 200px;
     position: absolute;
     color: white;
-    background-color: #bd8cbf;
+    background-color: #008f39;
 }
 
 .about-us .item p {
@@ -239,7 +239,7 @@ header button:hover a {
     width: 100px;
     height: 200px;
     position: absolute;
-    background-color: #bd8cbf;
+    background-color: #008f39;
     top: 140px;
     z-index: -5;
 }
@@ -248,7 +248,7 @@ header button:hover a {
     width: 100px;
     height: 200px;
     position: absolute;
-    background-color: #bd8cbf;
+    background-color: #008f39;
     bottom: 58px;
     right: 34px;
     z-index: -5;
@@ -257,7 +257,7 @@ header button:hover a {
 .about-us .row > div > .item:nth-of-type(3) div {
     position: relative;
     z-index: 5;
-    background-color: #bd8cbf;
+    background-color: #008f39;
     padding: 5px;
 }
 
@@ -286,7 +286,7 @@ header button:hover a {
 .services .carousel-control-next, .services .carousel-control-prev {
     width: 60px;
     height: 60px;
-    background: #bd8cbf;
+    background: #008f39;
     border-radius: 50%;
 }
 
@@ -307,7 +307,7 @@ header button:hover a {
 }
 
 .services i {
-    color: #bd8cbf;
+    color: #008f39;
 }
 
 /* agency */
@@ -358,7 +358,7 @@ header button:hover a {
 }
 
 .statistics i, .statistics p {
-    color: #bd8cbf;
+    color: #008f39;
 }
 
 .statistics i {
@@ -412,7 +412,7 @@ header button:hover a {
     height: 40px;
     padding: 0;
     line-height: 40px;
-    background-color: #ef44f8;
+    background-color: #006328;
     color: white;
     margin: 0 auto;
     display: block;
@@ -427,11 +427,11 @@ footer, footer a {
 footer {
     display: block;
     overflow: hidden;
-    background-color: #563158;
+    background-color: #008f39;
 }
 
 footer a:hover {
-    color: #bd8cbf
+    color: #008f39
 }
 
 footer .container > ul {
@@ -483,7 +483,7 @@ footer .item form input[type="submit"] {
     width: 100px;
     height: 40px;
     line-height: 4px;
-    background-color: #ef44f8;
+    background-color: #006328;
     border: none;
     float: right;
     color: #FFF;
@@ -491,7 +491,7 @@ footer .item form input[type="submit"] {
 }
 
 footer .copyright {
-    background-color: #59355b;
+    background-color: #00471d;
     padding: 15px 0;
 }
 
@@ -574,7 +574,7 @@ footer .copyright p {
     /* navbar */
     
     .navbar ul {
-        background-color: rgba(189, 140, 191, .85);
+        background-color: rgba(0, 143, 57, .51);
     }
     .navbar ul li {
         margin: 10px 0;
