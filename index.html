@@ -58,6 +58,8 @@
         </header>
         <div class="project-description" id="project-description">
             <div class="small-container">
+                <p></p>
+                <p></p>
                 <h2 class="text-center"><span> Project Description</span></h2>
                 <div class="container">
                     <div class="row">
@@ -76,7 +78,39 @@
                 <h2 class="text-center">Need for <span>Big Data</span></h2>
                 <div class="container">
                     <div class="row">
-                        <p> Necesitamos <span>Big Data</span> para poder almacenar y manejar los datos iniciales y futuros </p>
+                        <p> Necesitamos <span>Big Data</span> para poder almacenar y manejar tanto los datos iniciales como los futuros
+                         que cogeremos de Spotify. </p>
+                         <p> También necesitamos <span>Large Parallel Processing </span> para procesar los datos y entrenar al
+                             modelo de aprendizaje supervisado que predice la popularidad de los nuevos lanzamientos. </p>
+                    </div>
+                </div>
+                <div class="first"></div>
+                <div class="second"></div>
+            </div>
+        </div>
+        <div class="model" id="model">
+            <div class="small-container">
+                <h2 class="text-center">Prediction <span>Model</span></h2>
+                <div class="container">
+                    <div class="row">
+                        <p> Para crear el modelo de predicción, partimos de un dataset que contine unas 160k canciones 
+                            alojadas en Spotify cuyo año de publicación va desde 1921 hasta la actualidad. 
+                            Cada canción viene descrita en el dataset por las siguientes variables: 
+                            <span>id, name, artists, year, valence, acousticness, danceability, duration_ms, energy, 
+                            explicit, instrumentalness, key, liveness, loudness, mode, popularity, release_date, speechiness y tempo.</span>
+                            Podemos observar que se trata de una serie de variables y métricas muy heterogénes y quizá no todas sean relevantes para nuestro modelo de regresión. 
+                            Por ello conviene relizar un estudio y limpieza previa del conjunto para conservar solo aquellas veriables útiles para el predictor.
+                        </p>
+                        <h4>Estudio y Limpieza</h4>
+                        <p>
+                            A grandes rasgos podemos diferenciar dos grandes tipos de columnas en el conjunto: 
+                            las <span>variables no numéricas</span> (describen atributos de la pista como su nombre, artista, identificador) 
+                            y las <span>variables numéricas</span> (describen diversas métricas del sonido, duración o incluso otros atributos como 
+                            el año de lanzamiento). Para nuestro modelo de regresión, utilizaremos las <span>variables numéricas</span>. 
+                            Es conveniente además conocer cuáles de estás métricas guardan un mayor grado de correlación con la variable a 
+                            predecir ya que así nuestro modelo de regresión ofrecerá resultados más precisos y fiables que si utilizamos variables 
+                            menos significativas.   
+                        </p>
                     </div>
                 </div>
                 <div class="first"></div>
@@ -98,9 +132,9 @@
                         <p>songs</p>
                     </div>
                     <div class="col-lg-3 col-md-6 col-12">
-                        <i class="fa fa-home fa-3x"></i>
-                        <h3>325</h3>
-                        <p>cottages</p>
+                        <i class="fab fa-spotify fa-3x"></i>
+                        <h3>32</h3>
+                        <p>albums</p>
                     </div>
                     <div class="col-lg-3 col-md-6 col-12">
                         <i class="fas fa-database fa-3x"></i>
