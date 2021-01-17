@@ -62,8 +62,9 @@
                     <div class="row">
                         <p> 
                         La idea de la aplicación es predecir en streaming la popularidad de las canciones de las new_releases 
-                        de Spotify. Para ello haremos uso de un modelo de regresión lineal previamente entrenado a partir de un dataset 
-                        de unas 160k canciones que contienen diferentes parámetros y métricas de los distintos temas. </p>
+                        de Spotify. Para ello haremos uso de un modelo de regresión lineal previamente entrenado a partir de un 
+                        <a href="https://www.kaggle.com/yamaerenay/spotify-dataset-19212020-160k-tracks">dataset que contine unas 160k canciones </a> 
+                        que contienen diferentes parámetros y métricas de los distintos temas. </p>
                     </div>
                 </div>
                 <div class="first"></div>
@@ -87,10 +88,11 @@
         </div>
         <div class="model" id="model">
             <div class="small-container">
-                <h2 class="text-center">Prediction <span>Model</span></h2>
+                <h2 class="text-center"><span>Prediction Model & Data</span></h2>
                 <div class="container">
                     <div class="row">
-                        <p> Para crear el modelo de predicción, partimos de un dataset que contine unas 160k canciones 
+                        <p> Para crear el modelo de predicción, partimos de un 
+                            <a href="https://www.kaggle.com/yamaerenay/spotify-dataset-19212020-160k-tracks">dataset que contine unas 160k canciones </a>  
                             alojadas en Spotify cuyo año de publicación va desde 1921 hasta la actualidad. 
                             Cada canción viene descrita en el dataset por las siguientes variables: 
                             <span>id, name, artists, year, valence, acousticness, danceability, duration_ms, energy, 
@@ -108,6 +110,27 @@
                             predecir ya que así nuestro modelo de regresión ofrecerá resultados más precisos y fiables que si utilizamos variables 
                             menos significativas.   
                         </p>
+                        <div class="popularity_corr">
+                            <img src="imgs/popularity_corr.png" class="d-block w-100" alt="Popularity correlation">
+                        </div>
+                        <p>
+                            Observamos que con mucha diferencia la variable que más correlacionada está con la popularidad de una pista es, 
+                            con diferencia <span>year</span>, seguida de otras que tambien lo están en manor medida como <span>energy, acousticness o loudness.</span> 
+                            El resto de variables guardan un grado de correlación con la popularidad bastante residual, 
+                            por lo que será conveniente descartarlos de cara a la construcción de nuestro modelo ya que quizá sean perjudiciales.
+                        </p>
+                        <h4>El modelo</h4>
+                        <p>
+                            Optamos finalmente por utilizar un modelo de regresión lineal múltiple para establecer una relación estadística entre las variables seleccionadas 
+                            y la popularidad. En este caso hemos optado por utilizar el modelo <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html">LinearRegression de scikit-learn</a>. Su funcionamiento es simple, 
+                            genera el modelo con el metodo fit(x,y) a partir de una matriz de datos (cada fila describe una pista mediante las variables elegidas) 
+                            y un vector de etiquetas que en nuestro caso contiene la popularidad de cada pista descrita en la matriz ya que esta es la variable 
+                            objetivo. Una vez entrenado, podemos medir el error medio de sus predicciones comparandolas con las etiquetas originales. 
+                            Con el modelo ya genereado, el método predict(x) devolverá las etiqutas que el modelo asocie a cada nueva pista descrita parámetro. 
+                            Además, podemos usar el error medio del modelo para emitir nuestra predicción como un rango en vez de un único valor 
+                            (predicción ± error_medio).
+                        </p>
+
                     </div>
                 </div>
                 <div class="first"></div>
