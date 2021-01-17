@@ -27,7 +27,7 @@ header {
     width: 100%;
 }
 
-h2 span, h1 span {
+h2 span, h1 span, p span {
     color: #008f39;
 }
 
@@ -180,7 +180,7 @@ header button:hover a {
 }
 
 .about-us .item {
-    width: 200px;
+    width: 150px;
     position: absolute;
     color: white;
     background-color: #008f39;
@@ -191,7 +191,7 @@ header button:hover a {
 }
 
 .about-us .item img {
-    width: 100%;
+    width: 150px;
     height: 150px
 }
 
