@@ -60,6 +60,7 @@ nav.navbar {
     top: 0;
     left: 0;
     background-color: black;
+    opacity: 0.3;
     width: 100%;
     z-index: 1000;
     font-family: 'Open Sans', sans-serif;
