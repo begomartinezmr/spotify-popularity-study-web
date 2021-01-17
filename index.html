@@ -89,6 +89,32 @@
                 <div class="second"></div>
             </div>
         </div>
+        <div class="statistics text-capitalize text-center font-weight-bold">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <i class="fas fa-file-csv fa-3x"></i>
+                        <h3>1</h3>
+                        <p>Datasheet</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <i class="fas fa-music fa-3x"></i>
+                        <h3>160K</h3>
+                        <p>songs</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <i class="fab fa-spotify fa-3x"></i>
+                        <h3>32</h3>
+                        <p>albums</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <i class="fas fa-database fa-3x"></i>
+                        <h3>16 MB</h3>
+                        <p>of Data</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="model" id="model">
             <div class="small-container">
                 <h2 class="text-center"><span>Prediction Model & Data</span></h2>
@@ -125,15 +151,46 @@
                         <h4>El modelo</h4>
                         <p>
                             Optamos finalmente por utilizar un modelo de regresión lineal múltiple para establecer una relación estadística entre las variables seleccionadas 
-                            y la popularidad. En este caso hemos optado por utilizar el modelo <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html">LinearRegression de scikit-learn</a>. Su funcionamiento es simple, 
-                            genera el modelo con el metodo fit(x,y) a partir de una matriz de datos (cada fila describe una pista mediante las variables elegidas) 
+                            y la popularidad. En este caso hemos optado por utilizar el modelo 
+                            <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html">LinearRegression de scikit-learn</a>. 
+                            Su funcionamiento es simple, genera el modelo con el metodo fit(x,y) a partir de una matriz de datos (cada fila describe una pista mediante las variables elegidas) 
                             y un vector de etiquetas que en nuestro caso contiene la popularidad de cada pista descrita en la matriz ya que esta es la variable 
                             objetivo. Una vez entrenado, podemos medir el error medio de sus predicciones comparandolas con las etiquetas originales. 
                             Con el modelo ya genereado, el método predict(x) devolverá las etiqutas que el modelo asocie a cada nueva pista descrita parámetro. 
                             Además, podemos usar el error medio del modelo para emitir nuestra predicción como un rango en vez de un único valor 
                             (predicción ± error_medio).
                         </p>
-
+                    </div>
+                </div>
+                <div class="first"></div>
+                <div class="second"></div>
+            </div>
+        </div>
+        <div class="model" id="model">
+            <div class="small-container">
+                <h2 class="text-center"><span>The application</span></h2>
+                <div class="container">
+                    <div class="row">
+                        <p> 
+                        La aplicación está basada en un modelo cliente-servidor comunicados a través de un socket TCP. 
+                        La idea es tener un proceso conectado a la interfaz python de spotify (spotipy) para recibir los álbumes 
+                        new_releases a través de ella y poder enviarlos al segundo proceso en formato csv para que este pueda realizar 
+                        la predicción a traves del modelo de regresión. A continuación exponemos los detalles de ambos scripts:
+                        </p>
+                        <li>
+                            <ul><span>spotify_releases</span> es el proceso que se conecta con la interfaz de spotify y 
+                            recupera la información de las new_releases. Éste método recupera albumes enteros, 
+                            por lo que el proceso debe encargarse de recuperar las pistas que conforman cada album. 
+                            Una vez las recupera todas, las envía al proceso <span>spotify_processing</span> como una tabla de pistas con sus 
+                            correspondiente atributos en formato csv. Cabe destacar que tan solo recuperaremos aquellos atributos que 
+                            utiliza nuestro modelo de predicción que detallamos anteriormente.
+                            </ul>
+                            <ul><span>spotify_processing</span> es el proceso que conecta con <span>spotify_releases</span> para recibir
+                            los nuevos albumes como tablas de pistas, las formatea adecuadamente y las pasa por el modelo de predicción. 
+                            Antes de conectar con <span>spotify_releases</span>, el proceso crea y entrena el modelo a partir de los datos de spotify_model.csv.
+                            </ul>
+                        </li>
+                        
                     </div>
                 </div>
                 <div class="first"></div>
@@ -141,33 +198,6 @@
             </div>
         </div>
 
-        <div class="statistics text-capitalize text-center font-weight-bold">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 col-12">
-                        <i class="fas fa-file-csv fa-3x"></i>
-                        <h3>1</h3>
-                        <p>Datasheet</p>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12">
-                        <i class="fas fa-music fa-3x"></i>
-                        <h3>160K</h3>
-                        <p>songs</p>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12">
-                        <i class="fab fa-spotify fa-3x"></i>
-                        <h3>32</h3>
-                        <p>albums</p>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12">
-                        <i class="fas fa-database fa-3x"></i>
-                        <h3>16 MB</h3>
-                        <p>of Data</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
         <div class="services" id="service">
             <div class="container">
                 <h2 class="text-capitalize">Enjoy <span>Resort</span></h2>
@@ -213,25 +243,7 @@
                 </div>
             </div>
         </div>
-        
-
-        
-        <div class="contact" id="contact">
-            <div class="violet-overlay">
-                <div class="container">
-                    <h2 class="text-center">Get in touch</h2>
-                    <div class="contact-form">
-                        <form>
-                            <input type="text" placeholder="Name">
-                            <input type="email" placeholder="Email">
-                            <input type="text" placeholder="Phone">
-                            <textarea placeholder="Message"></textarea>
-                            <input type="submit" value="SEND">
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+    
 
         <div class="about-us" id="about">
             <div class="small-container">
