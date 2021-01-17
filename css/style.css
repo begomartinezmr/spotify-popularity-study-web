@@ -51,13 +51,15 @@ body {
     font-size: 1.1rem;
 }
 
+
+
 /* navbar */
 
 nav.navbar {
-    position: absolute;
+	position: fixed;
     top: 0;
     left: 0;
-    background-color: transparent;
+    background-color: black;
     width: 100%;
     z-index: 1000;
     font-family: 'Open Sans', sans-serif;
@@ -135,6 +137,7 @@ header button:hover {
 header button:hover a {
     color: white;
 }
+
 
 /* about us */
 
