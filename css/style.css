@@ -27,7 +27,7 @@ header {
     width: 100%;
 }
 
-h2 span, h1 span, p span {
+h2 span, h1 span, p span, li span {
     color: #008f39;
 }
 
