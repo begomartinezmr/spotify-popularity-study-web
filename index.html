@@ -174,20 +174,33 @@
                         new_releases a través de ella y poder enviarlos al segundo proceso en formato csv para que este pueda realizar 
                         la predicción a traves del modelo de regresión. A continuación exponemos los detalles de ambos scripts:
                         </p>
-                        <li>
-                            <ul><span>spotify_releases</span> es el proceso que se conecta con la interfaz de spotify y 
+                        <ul>
+                            <li><span>spotify_releases</span> es el proceso que se conecta con la interfaz de spotify y 
                             recupera la información de las new_releases. Éste método recupera albumes enteros, 
                             por lo que el proceso debe encargarse de recuperar las pistas que conforman cada album. 
                             Una vez las recupera todas, las envía al proceso <span>spotify_processing</span> como una tabla de pistas con sus 
                             correspondiente atributos en formato csv. Cabe destacar que tan solo recuperaremos aquellos atributos que 
                             utiliza nuestro modelo de predicción que detallamos anteriormente.
-                            </ul>
-                            <ul><span>spotify_processing</span> es el proceso que conecta con <span>spotify_releases</span> para recibir
+                            </li>
+                            <li><span>spotify_processing</span> es el proceso que conecta con <span>spotify_releases</span> para recibir
                             los nuevos albumes como tablas de pistas, las formatea adecuadamente y las pasa por el modelo de predicción. 
                             Antes de conectar con <span>spotify_releases</span>, el proceso crea y entrena el modelo a partir de los datos de spotify_model.csv.
-                            </ul>
-                        </li>
-                        
+                            </li>
+                        </ul>
+                        <h4>Spotipy</h4>
+                        <p>
+                            Spotipy es una interfaz python que ofrece Spotify a los desarrolladores para tener completo acceso a los datos que ofrece Spotify. 
+                            Para poder utilizarla, se requiere un proceso previo de autenticación mediante un identificador del cliente y una clave secreta que 
+                            se pueden pasar como argumento del objeto SpotifyClientCredentials() o colocarse como variables de entorno en que se ejecuta el 
+                            proceso. Para obtener dichas claves se deben seguir los siguientes pasos:
+                            <ol>
+                             <li>Registar una cuenta de usuario ordinario de Spotify (o iniciar sesión en una previamente existente)</li>
+                             <li>Entrar en la plataforma de <a href="https://developer.spotify.com/dashboard/">desarrolladores de Spotify</a></li>
+                             <li>Seleccionar el botón Create an app y especificar un nombre y una descripción de la aplicación así como aceptar todos los términos de uso</li>
+                             <li>Una vez creada la aplicación en el developer dashboard de spotify, tan solo tenemos que consultar las claves asociadas a ella</li>
+                            </ol>
+
+                        </p>
                     </div>
                 </div>
                 <div class="first"></div>
