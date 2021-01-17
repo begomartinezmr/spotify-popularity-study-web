@@ -60,7 +60,6 @@ nav.navbar {
     top: 0;
     left: 0;
     background-color: black;
-    opacity: 0.3;
     width: 100%;
     z-index: 1000;
     font-family: 'Open Sans', sans-serif;
@@ -156,7 +155,6 @@ header button:hover a {
 .about-us .small-container > p + div {
     padding: 70px 0;
     background-color: white;
-    box-shadow: 5px 5px 10px #d2cfcf, -5px -5px 10px #d2cfcf;
 }
 
 .about-us .small-container > p + div h4 {
