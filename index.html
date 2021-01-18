@@ -207,6 +207,37 @@
                 <div class="second"></div>
             </div>
         </div>
+        <div class="usage" id="usage">
+            <div class="small-container">
+                <p></p>
+                <p></p>
+                <h2 class="text-center"><span> How to use it</span></h2>
+                <div class="container">
+                    <div class="row">
+                        <p> 
+                        Como ya detallamos en el anterior apartado La aplicación, 
+                        el programa está formado por dos scripts de python comunicados a través de un socket, 
+                        por lo que necesitaremos dos terminales en las que ejecutar cada uno de ellos. </p>
+                        <ol>
+                            <li>
+                                <p>Primero ejecutamos el script spotify_releases.py como un script python ordinario 
+                                (asumiendo que se cumplen los requisitos de autenticación de spotify detallados 
+                                en el apartado anterior)</p>
+                                <p>Terminal 1 $ python3 spotipy_releases.py</p>
+                            </li>
+                            <li>
+                                <p>Cuando el primer proceso quede a la espera de una conexión TCP, 
+                                lanzamos el script spotify_processing.py como un spark job</p>
+                                <p>Terminal 2 $ spark-submit spotify_processing.py</p>
+                            </li>
+                                
+                        </ol>
+                    </div>
+                </div>
+                <div class="first"></div>
+                <div class="second"></div>
+            </div>
+        </div>
            
 
         <div class="about-us" id="about">
