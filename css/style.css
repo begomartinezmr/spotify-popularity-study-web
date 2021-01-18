@@ -31,10 +31,6 @@ h2 span, h1 span, p span, li span {
     color: #008f39;
 }
 
-li {
-    list-style-type: none;
-}
-
 a:hover {
     text-decoration: none;
 }
