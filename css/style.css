@@ -88,6 +88,13 @@ nav.navbar form input {
     width: 100%;
 }
 
+ul {
+    list-style-type: circle;
+}
+ol {
+    list-style-type: decimal;
+}
+
 /* header */
 
 header {
