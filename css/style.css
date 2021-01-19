@@ -597,8 +597,11 @@ footer .copyright p {
         height: 350px;
         left: 50px;
     }
-    .about-us .small-container .text-right p {
+    .about-us .small-container .text-leftright p {
         width: 100%;
+    }
+    .about-us a {
+        color : rgba(0, 143, 57, .51);
     }
     
     /* services */
