@@ -328,7 +328,18 @@
                 <div class="container">
                     <div class="row">
                         <p> 
-                        Hablar de rendimiento </p>
+                            El rendimiento está condicionado por factores externos como el número de álbumes y canciones que devuelve Spotipy o 
+                            la latencia de comunicación con la API de Spotify. Es decir, la aplicación depdende de la velocidad con la que la API 
+                            nos devuelve los nuevos lanzamientos. 
+                        </p>
+                        <p>
+                            Las ejecuciones realizadas tanto el local como en AWS demuestran que la <span>conexión a la API de Spotify es un cuello de botella.</span>
+                            La aplicación podría no escalar con la misma eficiencia con la que escala nuestra infraestructura.
+                            El <span>escalado horizontal</span> de la aplicación, es decir, el aumentar el número de cores no provoca una mejora del rendimiento de la aplicación.
+                        </p>
+                        <p>   
+                            El tiempo medio de análisis de 100 álbumes, es decir, aproximadamente unas 1000 canciones es de 2 minutos.
+                        </p>
                     
                     </div>
                 </div>
